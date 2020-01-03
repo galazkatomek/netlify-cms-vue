@@ -7,12 +7,9 @@
     <nuxt class="content" />
     <div class="footer">
       <p>
-        <!-- This link is not an n-link because it is external -->
-        <a target="_blank"
-            rel="noopener noreferrer"
-            href="https://github.com/tylermercer/nuxt-netlifycms-boilerplate">
-          View this project on Github
-        </a>
+        <n-link to="/gallery">
+          Gallery
+        </n-link>
       </p>
       <p>
         <!-- This is not an n-link because the NetlifyCMS admin page is static.

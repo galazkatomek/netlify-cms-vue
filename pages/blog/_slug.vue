@@ -1,8 +1,13 @@
 <template lang="html">
   <div class="post">
-    <h1 class="title">{{title}}</h1>
-    <p class="date">Posted by {{author}} on {{date}}</p>
-    <div class="body" v-html="$md.render(body)"/>
+    <h1 class="title">{{title}}</h1>    
+    <img 
+      v-if="thumbnail"
+      :src="thumbnail"
+    />
+
+    <div  class="body" v-html="$md.render(body)"/>    
+    <p class="date">Posted on {{date}}</p>
     <p class="back"><a class="back-link" @click="$router.back()">Back</a></p>
   </div>
 </template>
@@ -19,11 +24,12 @@ export default {
     you're bringing in from the JSON.
     */
     let post = await import(`~/content/blog/${params.slug}.json`);
+    const { date, body, title, thumbnail } = post
     return {
-      date: post.date,
-      body: post.body,
-      title: post.title,
-      author: post.author,
+      date,
+      body,
+      title,
+      thumbnail
     };
   }
 }

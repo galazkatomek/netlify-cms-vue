@@ -1,11 +1,10 @@
-import pkg from './package'
-import info from './content/setup/info'
-import path from 'path'
-import glob from 'glob'
+import pkg from './package';
+import info from './content/setup/info';
+import path from 'path';
+import glob from 'glob';
 
 var dynamicRoutes = getDynamicPaths({
   '/blog': 'blog/*.json',
-  '/page': 'page/*.json',
 });
 
 console.log(dynamicRoutes);
@@ -50,16 +49,13 @@ export default {
   */
   modules: [
     '@nuxtjs/markdownit',
-    '@nuxtjs/axios', // Doc: https://axios.nuxtjs.org/usage
-    '@nuxtjs/pwa',
+    '@nuxtjs/axios' // Doc: https://axios.nuxtjs.org/usage
   ],
   markdownit: {
     injected: true,
     preset: 'default',
     breaks: true,
     html: true
-
-
   },
   /*
   ** Axios module configuration
@@ -81,7 +77,7 @@ export default {
   generate: {
     routes: dynamicRoutes
   }
-}
+};
 
 /**
  * Create an array of URLs from a list of files
