@@ -44,12 +44,25 @@ export default {
   plugins: [
   ],
 
-  /*
-  ** Nuxt.js modules
-  */
   modules: [
     '@nuxtjs/markdownit',
-    '@nuxtjs/axios' // Doc: https://axios.nuxtjs.org/usage
+    '@nuxtjs/axios', // Doc: https://axios.nuxtjs.org/usage
+    ['@reallifedigital/nuxt-image-loader-module', {
+      imagesBaseDir: 'content',
+      imageStyles: {
+        thumbnail: { actions: ['gravity|Center', 'resize|320|180^', 'extent|320|180|+0|+90'] },
+        small: { macros: ['scaleAndCrop|160|90'] },
+        medium: { macros: ['scaleAndCrop|320|180'] },
+        large: { macros: ['scaleAndCrop|640|360'] },
+      },
+      // Optional responsive style profiles:
+      responsiveStyles: {
+        thumb: {
+          srcset: 'small 160w, medium 320w, large 640w',
+          sizes: '(min-width: 1280px) 100vw, 50vw',
+        },
+      },
+    }]
   ],
   markdownit: {
     injected: true,

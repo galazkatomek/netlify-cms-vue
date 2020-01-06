@@ -7,7 +7,7 @@
       class="image-container"
       v-for="{url, title, body} in galleryImages">
         {{ title }}
-        <img 
+        <nuxt-img 
           :src="url"
           :alt="title"
           
