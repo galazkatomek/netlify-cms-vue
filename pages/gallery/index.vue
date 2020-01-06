@@ -5,10 +5,11 @@
     </div>
     <div
       class="image-container"
-      v-for="{url, title, body} in galleryImages">
-        {{ title }} + {{ getUrl(url)}}
+      v-for="galleryImage in galleryImages">
+        {{ galleryImage.title }} + {{ getUrl(galleryImage)}}
         <nuxt-img 
-          :src="getUrl(url)"
+          :src="getUrl(galleryImage)"
+          image-style="small"
           :alt="title"          
         />
         <div
@@ -22,12 +23,13 @@
 <script>
 export default {
   methods: {
-    getUrl(url) {
-      return url.replace('content/','')
+    getUrl(galleryImage) {
+      console.log(galleryImage.url.replace('content/',''))
+      return galleryImage.url.replace('content/','')
     }
   },
   computed: {
-    galleryImages() {
+    galleryImages() {      
       return this.$store.state.galleryImages;
     }
   }
