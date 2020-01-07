@@ -48,7 +48,7 @@ export default {
     '@nuxtjs/markdownit',
     '@nuxtjs/axios', // Doc: https://axios.nuxtjs.org/usage
     ['@reallifedigital/nuxt-image-loader-module', {
-      imagesBaseDir: 'content',
+      imagesBaseDir: 'static',
       imageStyles: {
         thumbnail: { actions: ['gravity|Center', 'resize|320|180^', 'extent|320|180|+0|+90'] },
         small: { macros: ['scaleAndCrop|160|90'] },

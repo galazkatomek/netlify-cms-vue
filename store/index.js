@@ -22,7 +22,6 @@ export const mutations = {
  
 const contextToList = (context, contentRoute) => {
   const preparePath = (key) => `/${contentRoute}/${key.replace('.json', '').replace('./', '')}`;
-
   return context.keys().map(key => ({
     ...context(key),
     _path: preparePath(key)
@@ -44,7 +43,9 @@ export const actions = {
   async getGalleryImages({ state, commit }) {
     const context = await require.context('~/content/gallery/', false, /\.json$/);
 
-    const galleryImages = await contextToList(context, 'page');
+    const galleryImages = await context.keys().map(key => ({
+      ...context(key)
+    }));
     commit('setGalleryImages', galleryImages);
   },
   getSiteInfo({ state, commit }) {
