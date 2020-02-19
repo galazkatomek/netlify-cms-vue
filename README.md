@@ -1,13 +1,12 @@
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/tylermercer/nuxt-netlifycms-boilerplate)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/galazkatomek/netlify-cms-vue)
 
-Live demo [here](https://nuxt-netlifycms-boilerplate.netlify.com/).
+Live demo [here](https://elated-albattani-0ac47c.netlify.com/).
+Work in progress
 
-I wanted to build a website with [NetlifyCMS](https://www.netlifycms.org/) and [Nuxt](https://nuxtjs.org/) but couldn't find any simple, well-documented templates that worked with the latest version of Nuxt, so I built my own! I hope you find it useful. 🙂
+Simple nuxt/vue app with support of Netlify CMS and images gallery.
+User of CMS can upload images for gallery, that during build process will be transformed to obtain thumbnails. Image transformation library (@reallifedigital/nuxt-image-loader-module) is fully working on Netlify hosting, all dependencies are included there.     
 
-Many thanks to [Jake 101](https://jake101.com/), whose [Bael Template](https://github.com/jake-101/bael-template) served as a useful reference point as I built this.
+Based on:
+- nuxt-netlifycms-boilerplate - https://github.com/tylermercer/nuxt-netlifycms-boilerplate
+- jake-101/bael-template - https://github.com/jake-101/bael-template
 
-**To-Do:**
-
-* Add examples for the "Page" content type
-* Add an example of using dynamic layouts in Nuxt, e.g. a dedicated layout for mobile
-* Add an example of using Netlify-enabled forms
