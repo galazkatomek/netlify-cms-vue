@@ -47,19 +47,21 @@ export default {
   modules: [
     '@nuxtjs/markdownit',
     '@nuxtjs/axios', // Doc: https://axios.nuxtjs.org/usage
-    ['@reallifedigital/nuxt-image-loader-module', {
+    ['@reallifedigital/nuxt-image-loader-module', { // Doc: https://github.com/reallifedigital/nuxt-image-loader-module
       imagesBaseDir: 'static',
       imageStyles: {
-        thumbnail: { actions: ['gravity|Center', 'resize|320|180^', 'extent|320|180|+0|+90'] },
+        thumbnailOrg: { actions: ['gravity|Center', 'resize|120|180^', 'extent|320|180|+0|+90'] },
+        galleryThumbnail: { macros: ['scaleAndCrop|480|320'] },
+        galleryThumbnailSmall: { macros: ['scaleAndCrop|320|214'] },
         small: { macros: ['scaleAndCrop|160|90'] },
         medium: { macros: ['scaleAndCrop|320|180'] },
         large: { macros: ['scaleAndCrop|640|360'] },
       },
       // Optional responsive style profiles:
       responsiveStyles: {
-        thumb: {
-          srcset: 'small 160w, medium 320w, large 640w',
-          sizes: '(min-width: 1280px) 100vw, 50vw',
+        galleryThumbnailResponsive: {
+          srcset: 'galleryThumbnailSmall 320w, galleryThumbnail 480w',
+          sizes: '(min-width: 600px) 480px, 320px',
         },
       },
     }]

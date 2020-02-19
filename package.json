@@ -2,7 +2,7 @@
   "name": "nuxt-netlifycms-boilerplate",
   "version": "0.1.0",
   "description": "A simple boilerplate for using NetlifyCMS with Nuxt",
-  "author": "Tyler Mercer",
+  "author": "Tomasz Gałązka",
   "private": true,
   "scripts": {
     "dev": "nuxt",
@@ -18,7 +18,8 @@
     "cross-env": "^5.2.0",
     "lodash": ">=4.17.13",
     "lodash.template": ">=4.5.0",
-    "nuxt": "^2.11.0"
+    "nuxt": "^2.11.0",
+    "purecss": "^1.0.1"
   },
   "devDependencies": {
     "glob": "^7.1.3",
