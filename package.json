@@ -16,7 +16,7 @@
     "@nuxtjs/markdownit": "^1.2.7",
     "@reallifedigital/nuxt-image-loader-module": "^1.4.1",
     "cross-env": "^5.2.0",
-    "lodash": ">=4.17.13",
+    "lodash": ">=4.17.19",
     "lodash.template": ">=4.5.0",
     "nuxt": "^2.11.0",
     "purecss": "^1.0.1"
